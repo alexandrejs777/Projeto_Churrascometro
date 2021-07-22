@@ -32,11 +32,13 @@ section {
 h2 {
     text-align: center;
     margin-bottom: 20px;
+    color: white;
 }
 
 p {
     margin-bottom: 20px;
     text-align: justify;
+    color: white;
 }
 
 .formContainer {
@@ -59,12 +61,12 @@ input {
 }
 
 button {
-    margin-bottom: 10px;
+    margin-bottom: 0;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 4px;
+    border-radius: 4px 4px 0 0;
     border:none;
     width: 100%;
     height: 40px;
@@ -74,8 +76,9 @@ button {
 }
 
 #resultado {
+    margin-top: 0;
     padding: 10px;
-    border-radius: 16px;
+    border-radius: 0 0 16px 16px;
     text-align: right;
     background-color: orange;
 }
@@ -109,6 +112,15 @@ footer h4 {
         float: none;
     }
 
+    input {
+        font-size: 1.5rem;
+    }
+
+    button {
+        height: 60px;
+        font-size: 2.5rem;
+    }
+
     h2 {
         font-size: 2.5rem;
     }
@@ -122,8 +134,14 @@ footer h4 {
     }
 }
 
+@media screen and (max-width: 800px){
 
-@media screen and (max-width: 600px) {
+    section {
+        height: 75vh;
+    }
+}
+
+@media screen and (max-width: 640px) {
 
     h1 {
         font-size: 1.5rem;
@@ -131,6 +149,7 @@ footer h4 {
 
     section {
         padding: 4px;
+        height: 80vh;
     }
 
     .formContainer {
@@ -138,6 +157,14 @@ footer h4 {
     border-radius: 16px;
     float: none;
     height: auto;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1.5rem;
     }
 
     h2 {
@@ -170,10 +197,15 @@ footer h4 {
         padding-bottom: 5px;
         padding-left: 10px;
         padding-right: 10px;
-        border-radius: 4px;
+        border-radius: 4px 4px 0 0;
         border:none;
         width: 100%;
         background-color: orange;
+        margin-bottom: 0;
+    }
+
+    #resultado p {
+        margin-top: 1px;
     }
 
     h4 {
@@ -183,11 +215,19 @@ footer h4 {
 
 @media screen and (max-height: 568px){
 
+    section {
+        height: 78vh;
+    }
+
     h2 {
         margin-bottom: 5px;
     }
     
     p {
         margin-bottom: 5px;
+    }
+
+    #resultado p {
+        margin: auto;
     }
 }

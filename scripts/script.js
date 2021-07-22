@@ -19,6 +19,9 @@ function calcular() {
     if (duracao <= 0) {
         alert("Não é possível preparar um churrasco com menos de 1 hora!")
     }
+    else if (adultos < 0 || criancas < 0) {
+        alert("Não é possível digitar um valor menor do que zero!")
+    }
     else {
         let qtdTotalCarnes = carnePorPessoa(duracao) * adultos + (carnePorPessoa(duracao) / 2 * criancas);
         let qtdTotalCervejas = cervejaPorPessoa(duracao) * adultos;
@@ -62,4 +65,12 @@ function bebidaPorPessoa(duracao) {
         return 1000;
     }
 
+}
+
+function keyPress(e) {
+    let enterKey = e.keyCode || e.which;
+
+    if (enterKey == 13) {
+        calcular();
+    }
 }
