@@ -11,34 +11,30 @@
 </head>
 
 <body>
-
-    <header>
-        <h1>CHURRASCÔMETRO</h1>
-    </header>
-
     <div class="container">
 
-        <div class="content">
+        <header>
+            <h1>CHURRASCÔMETRO</h1>
+        </header>
 
-            <input id="adultos" name="adultos" placeholder="Adultos" type="number">
-            <input id="criancas" name="criancas" placeholder="Crianças" type="number">
-            <input id="duracao" name="duracao" placeholder="Duração (h)" type="number">
-            <button onclick="calcular()">Calcular</button>
+        <section>
+            <div class="formContainer">
+                <h2>Convide seus amigos e familiares!</h2>
+                <p>Saiba quanto de carnes e bebidas voc~e vai precisar para transformar a sua festa num sucesso!</p>
+                <input id="adultos" name="adultos" placeholder="Adultos" type="number">
+                <input id="criancas" name="criancas" placeholder="Crianças" type="number">
+                <input id="duracao" name="duracao" placeholder="Duração (h)" type="number">
+                <button onclick="calcular()">Calcular</button>
 
-            <div id="resultado">
-
+                <div id="resultado">
+                </div>
             </div>
-
-        </div>
-
+        </section>
+        <script src="./scripts/script.js"></script>
+        <footer>
+            <h4>Projeto elaborado e desenvolvido para o curso ProgramadorBr</h4>
+        </footer>
     </div>
-
-    <script src="./scripts/script.js"></script>
-
-    <footer>
-        <h4>Elaborado e desenvolvido como projeto do curso ProgramadorBr</h4>
-    </footer>
-
 </body>
 
 </html>

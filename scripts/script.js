@@ -10,24 +10,29 @@ let inputDuracao = document.getElementById("duracao");
 
 let resultado = document.getElementById("resultado");
 
-function calcular(){
+function calcular() {
 
     let adultos = inputAdultos.value;
     let criancas = inputCriancas.value;
     let duracao = inputDuracao.value;
-    
-    let qtdTotalCarnes = carnePorPessoa(duracao) * adultos + (carnePorPessoa(duracao) / 2 * criancas);
-    let qtdTotalCervejas = cervejaPorPessoa(duracao) * adultos;
-    let qtdTotalBebidas = bebidaPorPessoa(duracao) * adultos + (bebidaPorPessoa(duracao) / 2 * criancas);
 
-    resultado.innerHTML = `<p>${qtdTotalCarnes / 1000} kg de carnes</p>`
-    resultado.innerHTML += `<p>${Math.ceil(qtdTotalCervejas / 355)} latas de cervejas</p>`
-    resultado.innerHTML += `<p>${Math.ceil(qtdTotalBebidas / 2000)} garrafas de 2 litros de bebidas</p>`
+    if (duracao <= 0) {
+        alert("Não é possível preparar um churrasco com menos de 1 hora!")
+    }
+    else {
+        let qtdTotalCarnes = carnePorPessoa(duracao) * adultos + (carnePorPessoa(duracao) / 2 * criancas);
+        let qtdTotalCervejas = cervejaPorPessoa(duracao) * adultos;
+        let qtdTotalBebidas = bebidaPorPessoa(duracao) * adultos + (bebidaPorPessoa(duracao) / 2 * criancas);
 
-    console.log(qtdTotalCarnes, qtdTotalCervejas, qtdTotalBebidas);
+        resultado.innerHTML = `<p>${qtdTotalCarnes / 1000} kg de carnes</p>`
+        resultado.innerHTML += `<p>${Math.ceil(qtdTotalCervejas / 355)} latas de cervejas</p>`
+        resultado.innerHTML += `<p>${Math.ceil(qtdTotalBebidas / 2000)} garrafas de 2 litros de bebidas</p>`
+
+        console.log(qtdTotalCarnes, qtdTotalCervejas, qtdTotalBebidas);
+    }
 }
 
-function carnePorPessoa(duracao){
+function carnePorPessoa(duracao) {
 
     if (duracao >= 6) {
         return 650;
@@ -35,10 +40,9 @@ function carnePorPessoa(duracao){
     else {
         return 400;
     }
-
 }
 
-function cervejaPorPessoa(duracao){
+function cervejaPorPessoa(duracao) {
 
     if (duracao >= 6) {
         return 2000;
@@ -49,7 +53,7 @@ function cervejaPorPessoa(duracao){
 
 }
 
-function bebidaPorPessoa(duracao){
+function bebidaPorPessoa(duracao) {
 
     if (duracao >= 6) {
         return 1500;
