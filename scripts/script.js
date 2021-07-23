@@ -31,6 +31,8 @@ function calcular() {
         resultado.innerHTML += `<p>${Math.ceil(qtdTotalCervejas / 355)} latas de cervejas</p>`
         resultado.innerHTML += `<p>${Math.ceil(qtdTotalBebidas / 2000)} garrafas de 2 litros de bebidas</p>`
 
+        resultado.style.backgroundColor = "darkorange"
+
         console.log(qtdTotalCarnes, qtdTotalCervejas, qtdTotalBebidas);
     }
 }

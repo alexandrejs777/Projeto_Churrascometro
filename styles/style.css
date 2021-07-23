@@ -83,7 +83,7 @@ section {
     font-size: 1rem;
     border-radius: 8px;
     cursor:pointer;
-    background-color: rgb(248, 198, 90);
+    background-color: darkorange;
     color: white;
     font-size: 1.5rem;
 }
@@ -96,7 +96,6 @@ section {
     width: 95%;
     padding: 0.5rem 2rem;
     border-radius: 8px;
-    background-color: darkorange;
     margin-bottom: 1rem;
 }
 
