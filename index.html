@@ -2,6 +2,7 @@
 <html lang="pt-br">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,30 +12,52 @@
 </head>
 
 <body>
-    <div class="container">
 
-        <header>
-            <h1>CHURRASCÔMETRO</h1>
-        </header>
+    <main>
+
+        <h1>CHURRASCÔMETRO</h1>
 
         <section>
+
             <div class="formContainer">
+
                 <h2>Convide seus amigos e familiares!</h2>
-                <p>Saiba a quantidade certa de carnes e bebidas necessárias para transformar a sua festa em um verdadeiro sucesso!</p>
-                <input id="adultos" name="adultos" placeholder="Quantidade de adultos" type="number" onkeypress="keyPress(event)">
-                <input id="criancas" name="criancas" placeholder="Quantidade de crianças" type="number" onkeypress="keyPress(event)">
-                <input id="duracao" name="duracao" placeholder="Duração do churrasco em horas" type="number" onkeypress="keyPress(event)">
+
+                <p>Saiba a quantidade certa de carnes e bebidas necessárias para transformar a sua festa em um
+                    verdadeiro sucesso!</p>
+                
+                <span>Quantidade de adultos:</span>
+                <input id="adultos" name="adultos" placeholder="Quantidade de adultos" type="number"
+                    onkeypress="keyPress(event)">
+
+                <span>Quantidade de crianças:</span>
+                <input id="criancas" name="criancas" placeholder="Crianças" type="number"
+                    onkeypress="keyPress(event)">
+
+                <span>Duração prevista do churrasco em horas:</span>
+                <input id="duracao" name="duracao" placeholder="Duração" type="number"
+                    onkeypress="keyPress(event)">
+
                 <button onclick="calcular()">Calcular</button>
 
                 <div id="resultado">
+
                 </div>
+
             </div>
+
         </section>
+
         <script src="./scripts/script.js"></script>
+
         <footer>
-            <h4>Projeto desenvolvido para o curso Desenvolvimento Web: Do zero ao primeiro projeto - ProgramadorBr</h4>
+
+            <p>Projeto desenvolvido para o curso Desenvolvimento Web: Do zero ao primeiro projeto - ProgramadorBr</p>
+
         </footer>
-    </div>
+
+    </main>
+
 </body>
 
 </html>
